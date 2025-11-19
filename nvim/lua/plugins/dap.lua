@@ -39,13 +39,7 @@ return {
       dap.configurations.cpp = default_config.c
       dap.configurations.rust = default_config.c
 
-      local project_dap_path = vim.fn.getcwd() .. "/.nvim/dap.lua"
-      if vim.fn.filereadable(project_dap_path) == 1 then
-        local ok, project_config = pcall(dofile, project_dap_path)
-        if not ok then
-          vim.notify("Failed to load project dap.lua: " .. project_config, vim.log.levels.ERROR)
-        end
-      end
+      require('utils').load_custom_project_config("dap.lua")
 
       local opts = { noremap = true, silent = false }
 
