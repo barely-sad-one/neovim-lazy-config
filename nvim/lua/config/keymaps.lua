@@ -13,8 +13,8 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
 vim.keymap.set("n", "<C-Left>", ":vertical resize +2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize -2<CR>")
 
-vim.keymap.set("n", "<A-j>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("n", "<A-k>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("x", "<A-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("x", "<A-k>", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("v", "p", '"_dp')
 vim.keymap.set("v", "<leader>y", '"+y')

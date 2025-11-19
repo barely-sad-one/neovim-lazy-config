@@ -5,6 +5,8 @@ return {
     config = function()
         vim.cmd.colorscheme("tokyonight")
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { underline = false, undercurl = false })
+        vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", {})
 
         -- Set the color for line numbers
         vim.cmd [[
